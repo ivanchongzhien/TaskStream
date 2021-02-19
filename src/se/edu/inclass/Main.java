@@ -46,4 +46,10 @@ public class Main {
             }
         }
     }
+    public static void printDeadlinesUsingStreams(ArrayList<Task> task) {
+        System.out.println("Printing deadline using stream");
+        task.stream()
+                .filter((t) -> t instanceof Deadline)   // predicate
+                .forEach(System.out::println);
+    }
 }
